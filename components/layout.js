@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-export default function Layout({ children }) {
+export default function Layout({ onCollectWallet, children }) {
+	
 	return (
 	<div className="flex flex-col h-screen justify-between text-gray-400 bg-gray-900 body-font">
   		<header className="h-fit">
@@ -15,7 +16,8 @@ export default function Layout({ children }) {
 		      <a className="mr-5 hover:text-white">Third Link</a>
 		      <a className="mr-5 hover:text-white">Fourth Link</a>
 		    </nav>
-			<button type="submit" className="inline-flex items-center justify-center space-x-2 py-3 px-4 border border-transparent text-sm font-medium rounded bg-gray-700 hover:bg-gray-600 text-white transition-colors">
+			<button type="submit" onClick={onCollectWallet}
+			className="inline-flex items-center justify-center space-x-2 py-3 px-4 border border-transparent text-sm font-medium rounded bg-gray-700 hover:bg-gray-600 text-white transition-colors">
 			  <svg fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="2" className="h-6 w-6" viewBox="0 0 24 24">
 			    <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
 			  </svg>
